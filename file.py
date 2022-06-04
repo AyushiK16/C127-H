@@ -15,7 +15,7 @@ def scrape():
         #we have to repeat the same code for each page
         soup = BeautifulSoup(browser.page_source, 'html.parser')
         #convert the page into html format.
-        for ul_tag in soup.find_all('ul', attrs = {'class', 'headerSort'}):
+        for ul_tag in soup.find_all('th', attrs = {'class', 'headerSort'}):
             #where the class of <ul> tag is exoplanet
             li_tags = ul_tag.find_all('td')
             tempList = []
